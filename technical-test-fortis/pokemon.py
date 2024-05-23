@@ -1,13 +1,14 @@
-from abc import ABC
+from abc import ABC, abstractmethod
+
 
 class Pokemon(ABC):
-  def __init__(self, type: str, hp:int) -> None:
-    self.type = type
-    self.hp = hp
-    
-@abstractmethod
-def special_attack(self, opponent_pokemon: Pokemon) -> int:
-  ...
+    def __init__(self, type_: str, hp: int) -> None:
+        self.type_ = type_
+        self.hp = hp
+
+    @abstractmethod
+    def special_attack(self, opponent_pokemon: "Pokemon") -> int:
+        ...
 
 # FirePokemon
 # 1/ Add a class constant weak_type = "grass"
@@ -17,17 +18,18 @@ def special_attack(self, opponent_pokemon: Pokemon) -> int:
   # - if opponent pokemon type is the same as "fire", deals half the damage
   # - else, deals the normal damage
 
+
 # combat()
 def combat(my_pokemon: Pokemon, opponent_pokemon: Pokemon) -> Pokemon:
-  """
-  Simulates a fight between Pokemons.
-  "my_pokemon" always attacks first.
-  Then, they attack one after the other until one is dead (hp<=0).
-  Args:
-    - my_pokemon: Pokemon that will attack 1st
-    - opponent_pokemon: Pokemon that will attack 2nd
+    """
+    Simulates a fight between Pokemons.
+    "my_pokemon" always attacks first.
+    Then, they attack one after the other until one is dead (hp<=0).
+    Args:
+      - my_pokemon: Pokemon that will attack 1st
+      - opponent_pokemon: Pokemon that will attack 2nd
 
-  Returns:
-    - The victorious pokemon
-  """
-  ...
+    Returns:
+      - The victorious pokemon
+    """
+    ...
