@@ -22,8 +22,8 @@ Create a class Car that inherit from Vehicle
 Gabriel: introduce class Bike
 
 Task 2:
-Create a find_best_vehicle method that takes 2 vehicles as argument and return the one with the highest autonomy.
+Create a find_best_vehicle function that takes 2 vehicles as argument and return the one with the highest autonomy.
 
 Task 3: 
-Add some unit tests on find_best_vehicle
+Add a unit test on find_best_vehicle
 """
